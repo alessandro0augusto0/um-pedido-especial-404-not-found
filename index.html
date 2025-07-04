@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro Mágico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Vídeo de fundo -->
+    <video class="video-background" id="videoFundo" loop muted playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <!-- Controles do vídeo -->
+    <div class="video-controls">
+        <button id="muteBtn" title="Ativar som">🔇</button>
+    </div>
+
+    <div class="container">
+        <h1>Um Pedido de Namoro Especial</h1>
+        <p>Olá amor ❤️,</p>
+        <p>Quero dizer que você ilumina minha vida como ninguém mais.</p>
+        <p>Você aceita namorar comigo?</p>
+        <p>Se sim, clique no coração!</p>
+        <div class="heart" onclick="mostrarResposta()">❤️</div>
+        
+        <!-- Área especial para o botão NÃO -->
+        <div id="nao-area">
+            <button id="nao" onmouseover="mudarPosicao()">Não</button>
+        </div>
+        
+        <p id="resposta"></p>
+        <div class="contador" id="contador">Tentativas: 0</div>
+        <div class="data-pedido" id="dataPedido"></div>
+    </div>
+
+    <!-- Fundo com corações flutuantes -->
+    <div class="heart-bg" id="heartBg"></div>
+
+    <!-- Overlay para ativação de áudio -->
+    <div class="audio-overlay" id="audioOverlay">
+        <div class="audio-message">
+            <h2>Clique para ativar a música ❤️</h2>
+            <p>Toque em qualquer lugar para começar</p>
+        </div>
+    </div>
+
+    <!-- Script do Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
